@@ -26,6 +26,22 @@ class MinStack
   end
 end
 
+minstack = MinStack.new
+
+minstack.push(3)
+minstack.push(4)
+minstack.push(5)
+minstack.push(2)
+minstack.push(1)
+
+puts minstack.get_min # => 1
+
+minstack.pop
+puts minstack.get_min # => 2
+
+minstack.pop
+puts minstack.get_min # => 3
+
 # The original Python code:
 # class MinStack():
 #   def __init__(self):
