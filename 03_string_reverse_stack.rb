@@ -8,7 +8,8 @@ def reverse_string(string)
   reversed_string
 end
 
-puts reverse_string("Bieber")
+puts reverse_string("stressed") # => desserts
+puts reverse_string("🌮 tacocat 😸") # => 😸tacocat🌮
 
 # The original Python code:
 # def reverse_string(a_string):
