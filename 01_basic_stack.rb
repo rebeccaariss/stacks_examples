@@ -1,6 +1,7 @@
 class Stack
   def initialize
-    @items = []
+    @items = [] #private instance variable; stack should not be directly
+    # accessible from outside of the class.
   end
 
   def push(data)
@@ -23,6 +24,23 @@ class Stack
     @items[-1]
   end
 end
+
+stack = Stack.new
+
+puts stack.is_empty # => true
+
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
+puts stack.size # => 3
+puts stack.peek # => 3
+
+popped_item = stack.pop
+puts popped_item # => 3
+puts stack.size # => 2
+puts stack.is_empty # => false
+puts stack.peek # => 2
 
 # The original Python code:
 # class Stack:
